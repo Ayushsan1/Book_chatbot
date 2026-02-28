@@ -5,7 +5,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from pymongo import MongoClient
 from pymongo.server_api import ServerApi
 from datetime import datetime
-import certifi
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -16,7 +16,7 @@ mongo_uri = os.getenv("MONGODB_URI", "").strip()
 
 db_enabled = True
 try:
-    client = MongoClient(mongo_uri, tls=True, tlsCAFile=certifi.where(), server_api=ServerApi('1'))
+    client = MongoClient(mongo_uri, server_api=ServerApi('1'))
     client.admin.command("ping")
     db = client["chatbot"]
     collection = db["users"]
