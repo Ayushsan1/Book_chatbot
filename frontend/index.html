@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thinkhub India – AI Assistant</title>
+  <meta name="description" content="AI-powered assistant for Thinkhub India – your expert guide to Infrastructure, Cloud, Analytics, and Digital Solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background blobs -->
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">TH</div>
+        <div>
+          <div class="brand-name">Thinkhub India</div>
+          <div class="brand-tagline">Inspire · Innovate · Ignite</div>
+        </div>
+      </div>
+
+      <nav class="pillars">
+        <p class="pillars-label">Core Pillars</p>
+        <div class="pillar-item" id="pillar-infra">
+          <span class="pillar-icon">🏗️</span> Infrastructure
+        </div>
+        <div class="pillar-item" id="pillar-cloud">
+          <span class="pillar-icon">☁️</span> Cloud Solutions
+        </div>
+        <div class="pillar-item" id="pillar-analytics">
+          <span class="pillar-icon">📊</span> Analytics
+        </div>
+        <div class="pillar-item" id="pillar-digital">
+          <span class="pillar-icon">🌐</span> Digital Solutions
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button id="clear-btn" class="clear-btn">🗑️ Clear Chat</button>
+      </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-container">
+      <header class="chat-header">
+        <div class="header-info">
+          <h1>AI Solutions Consultant</h1>
+          <p>Powered by Thinkhub India · Always online</p>
+        </div>
+        <div class="status-dot"></div>
+      </header>
+
+      <div class="messages-wrap" id="messages">
+        <!-- Welcome message -->
+        <div class="message bot-message" id="welcome-msg">
+          <div class="avatar bot-avatar">TH</div>
+          <div class="bubble bot-bubble">
+            <p>👋 Hello! I'm your <strong>Thinkhub India AI Consultant</strong>.</p>
+            <p>Ask me anything about our services — Cloud, Infrastructure, Analytics, or Digital Solutions. I'm here to help!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <div class="input-wrap">
+          <textarea
+            id="user-input"
+            placeholder="Ask about our Cloud, Infrastructure or Digital solutions..."
+            rows="1"
+            autocomplete="off"
+          ></textarea>
+          <button id="send-btn" onclick="sendMessage()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+        <p class="disclaimer">Thinkhub AI may make mistakes. Verify important information.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
